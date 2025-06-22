@@ -1,0 +1,23 @@
+{
+  "name": "aggrid-check",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "ag-grid-community": "^33.3.2",
+    "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5"
+  }
+}
