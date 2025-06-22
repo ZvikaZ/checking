@@ -53,6 +53,20 @@ const getIconSvg = (iconName: string): string => {
   return icons[iconName] || icons.help;
 };
 
+class CustomTooltip {
+  eGui!: HTMLElement;
+
+  init(params: any) {
+    this.eGui = document.createElement('div');
+    this.eGui.className = 'custom-tooltip';
+    this.eGui.textContent = params.value;
+  }
+
+  getGui() {
+    return this.eGui;
+  }
+}
+
 const columnDefs = [
   { field: 'category' },
   { 
@@ -66,7 +80,9 @@ const columnDefs = [
           <span class="icon">${iconSvg}</span>
         </div>
       `;
-    }
+    },
+    tooltipField: 'description',
+    tooltipComponent: CustomTooltip
   }
 ];
 
